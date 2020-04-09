@@ -1,11 +1,10 @@
 ---
-title: spring-transaction
+title: Spring-transaction
 date: 2020-01-11 21:33:25
-tags: springs
+tags: Spring
+categories:
+- Java Frame
 ---
-
-# Spring-three
-
 ## 自动注入
 
 - 在Spring 配置文件中对象名和ref=”id”id 名相同使用自动注入,可以不配置<property/>

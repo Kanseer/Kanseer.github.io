@@ -1,10 +1,10 @@
 ---
-title: spring简介
+title: Spring简介
 date: 2020-01-11 21:33:25
-tags: springs
+tags: Spring
+categories:
+- Java Frame
 ---
-# spring简介
-
 ## 1.核心功能
 
 - IOC/DI 控制反转/依赖注入
@@ -21,23 +21,16 @@ tags: springs
 
 - Beans: spring负责创建类对象并管理对象
 
-​		Core: 核心类
-
-​		Context: 上下文参数.获取外部资源或者管理注解等
-
-​		SpEl: 表达式语言
+  -  Core: 核心类
+  -  Context: 上下文参数.获取外部资源或者管理注解等
+  - SpEl: 表达式语言
 
 - AOP: 实现aop功能需要依赖
-
 - Aspects: 切面AOP依赖的包
-
 - Data Access/Integration: spring封装数据访问层相关内容
-
-​		JDBC: spring对JDBC封装的代码
-
-​		ORM: 封装了持久层框架的代码.(Hibernate)
-
-​		transaction: spring-tx.jar,声明事务使用
+  - JDBC: spring对JDBC封装的代码
+  - ORM: 封装了持久层框架的代码.(Hibernate)
+  - transaction: spring-tx.jar,声明事务使用
 
 - WEB: spring完成web相关功能是需要
 

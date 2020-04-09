@@ -1,10 +1,11 @@
 ---
-title: spring-AOP
+layout: spring
+title: Spring-AOP
 date: 2020-01-11 21:33:25
-tags: springs
+tags: Spring
+categories:
+- Java Frame
 ---
-# Spring-two
-
 ## AOP
 
 - AOP[Aspect Oriented Programming]:面向切面编程
@@ -31,14 +32,14 @@ tags: springs
     - arg1: 切点方法参数
     - arg2:切点在哪个对象中
 
-- ```JAVA
+```JAVA
   public class MyBeforeAdvice implements MethodBeforeAdvice {
   	@Override
   	public void before(Method arg0, Object[] arg1, Object arg2) throws Throwable {
   		System.out.println("执行前置通知");
   	}
   }
-  ```
+```
 
   - 新建后置通知类
     - arg0: 切点方法返回值
@@ -46,14 +47,14 @@ tags: springs
     - arg2:切点方法参数
     - arg3:切点方法所在类的对象
 
-- ```JAVA
+```JAVA
   public class MyAfterAdvice implements AfterReturningAdvice {
   	@Override
   	public void afterReturning(Object arg0, Method arg1,Object[] arg2,Object arg3) throws Throwable {
   		System.out.println("执行后置通知");
   	}
   }
-  ```
+```
 
   - 配置spring 配置文件
     - 引入aop 命名空间
@@ -62,28 +63,28 @@ tags: springs
     - *通配符,匹配任意方法名,任意类名,任意一级包名
     - 如果希望匹配任意方法参数(..)
 
-- ```XML
+```xml
   <beans>
-  <!-- 配置通知类对象,在切面中引入-->
-  <bean id="mybefore" class="com.bjsxt.advice.MyBeforeAdvice"></bean>
-  <bean id="myafter" class="com.bjsxt.advice.MyAfterAdvice"></bean>
-  <!-- 配置切面-->
-  <aop:config>
-  <!-- 配置切点-->
-  <aop:pointcut expression="execution(* com.bjsxt.test.Demo.demo2())" id="mypoint"/>
-  <!-- 通知-->
-  	<aop:advisor advice-ref="mybefore" pointcut-ref="mypoint"/>
-  	<aop:advisor advice-ref="myafter" pointcut-ref="mypoint"/>
-  </aop:config>
-  <!-- 配置Demo 类,测试使用-->
-  <bean id="demo" class="com.bjsxt.test.Demo"></bean>
+  	<!-- 配置通知类对象,在切面中引入-->
+  	<bean id="mybefore" class="com.bjsxt.advice.MyBeforeAdvice"></bean>
+  	<bean id="myafter" class="com.bjsxt.advice.MyAfterAdvice"></bean>
+  	<!-- 配置切面-->
+  	<aop:config>
+  	<!-- 配置切点-->
+  	<aop:pointcut expression="execution(* com.bjsxt.test.Demo.demo2())" id="mypoint"/>
+  	<!-- 通知-->
+  		<aop:advisor advice-ref="mybefore" pointcut-ref="mypoint"/>
+  		<aop:advisor advice-ref="myafter" pointcut-ref="mypoint"/>
+  	</aop:config>
+  	<!-- 配置Demo 类,测试使用-->
+  	<bean id="demo" class="com.bjsxt.test.Demo"></bean>
   </beans>
-  ```
+```
 
   - 异常通知
     - 新建一个类实现throwsAdvice 接口,必须自己写方法,且必须叫afterThrowing,有两种参数方式,必须是1 个或4 个,异常类型要与切点报的异常类型一致
 
-- ```java
+```java
   public class MyThrow implements ThrowsAdvice{
      /*
    	public void afterThrowing(Method m, Object[] args,Object target, Exception ex) {
@@ -93,22 +94,22 @@ tags: springs
   		System.out.println("执行异常通过-schema-base 方式");
   	}
   }
-  ```
+```
 
-- ```xml
+```xml
   <bean id="mythrow" class="com.bjsxt.advice.MyThrow"></bean>
   <aop:config>
   	<aop:pointcut expression="execution(* com.bjsxt.test.Demo.demo1())" id="mypoint"/>
   	<aop:advisor advice-ref="mythrow" pointcut-ref="mypoint" />
   </aop:config>
   <bean id="demo" class="com.bjsxt.test.Demo"></bean>
-  ```
+```
 
   - 环绕通知
     - 把前置通知和后置通知都写到一个通知中,组成了环绕通知
     - 新建一个类实现MethodInterceptor接口
 
-- ```java
+```java
   public class MyArround implements MethodInterceptor {
   	@Override
   	public Object invoke(MethodInvocation arg0) throws Throwable {
@@ -118,16 +119,16 @@ tags: springs
   		return result;
   	}
   }
-  ```
+```
 
-- ```xml
+```xml
   <bean id="myarround" class="com.bjsxt.advice.MyArround"></bean>
   <aop:config>
   	<aop:pointcut expression="execution(* com.bjsxt.test.Demo.demo1())" id="mypoint"/>
   	<aop:advisor advice-ref="myarround" pointcut-ref="mypoint" />
   </aop:config>
   <bean id="demo" class="com.bjsxt.test.Demo"></bean>
-  ```
+```
 
 
 
@@ -135,7 +136,7 @@ tags: springs
 
 - 新建类,不用实现,类中方法名任意
 
-- ```java
+```java
   public class MyAdvice {
   	public void mybefore(String name1,int age1){
   		System.out.println("前置"+name1 );
@@ -156,9 +157,8 @@ tags: springs
   		System.out.println("环绕后置");
   		return result;
   	}
-  }
-  	
-  ```
+  } 	
+```
 
 - 配置spring 配置文件
 
@@ -174,7 +174,7 @@ tags: springs
   - args() 有几个参数,arg-names 里面必须有几个参数
   - arg-names=”” 里面名称必须和通知方法参数名对应
 
-- ```xml
+```xml
   <aop:config>
   	<aop:aspect ref="myadvice">
   	<aop:pointcut expression="execution(* com.bjsxt.test.Demo.demo1(String,int)) and args(name1,age1)" id="mypoint"/>
@@ -186,7 +186,7 @@ tags: springs
   	<aop:around method="myarround" pointcut-ref="mypoint"/>-->
   	</aop:aspect>
   </aop:config>
-  ```
+```
 
 
 
@@ -194,15 +194,15 @@ tags: springs
 
 - spring 不会自动去寻找注解,必须告诉spring 哪些包下的类中可能有注解
 
-- ```xml
+```xml
   <context:component-scan base-package="com.bjsxt.advice"></context:component-scan>
-  ```
+```
 
 - @Component相当于<bean/>,如果没有参数,把类名首字母变小写,相当于<bean id=""/>
 
 - 在方法上添加@Pointcut(“ ”) 定义切点
 
-- ```java
+```java
   @Component
   public class Demo {
   	@Pointcut("execution(* com.bjsxt.test.Demo.demo1())")
@@ -211,11 +211,11 @@ tags: springs
   	System.out.println("demo1");
   	}
   }
-  ```
+```
 
 - 在通知类中配置,@Component 类被spring 管理,@Aspect 相当于<aop:aspect/>表示通知方法在当前类中
 
-- ```java
+```java
   @Component
   @Aspect
   public class MyAdvice {
@@ -239,7 +239,7 @@ tags: springs
   		return result;
   	}
   }
-  ```
+```
 
 
 
@@ -277,8 +277,8 @@ tags: springs
 
   - 使用spring aop 时,只要出现Proxy 和真实对象转换异常,设置为true 使用cglib,设置为false 使用jdk(默认值)
 
-  - ```xml
+```xml
     <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
-    ```
+```
 
     
