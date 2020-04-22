@@ -1,11 +1,12 @@
 ---
-title: Spring简介
+layout: Spring
+title: Spring-synopsis
 date: 2020-01-11 21:33:25
 tags: Spring
 categories:
 - Java Frame
 ---
-## 1.核心功能
+## 核心功能
 
 - IOC/DI 控制反转/依赖注入
 
@@ -13,7 +14,7 @@ categories:
 
 - 声明式事务
 
-## 2.spring runtime
+## Spring runtime
 
 - test: spring提供测试功能
 
@@ -38,13 +39,11 @@ categories:
 
 ​	![](/img/spring-runtime.jpg)
 
-# spring IoC/DI
-
-## 1.IOC(控制反转)是什么
+## IOC(控制反转)是什么
 
 ​	IoC完成new实例化对象事情,控制指控制类对象,反转指转交给spring负责
 
-## 2.环境搭建
+## 环境搭建
 
 - 四个核心包一个日志包(commons-logging)
 
@@ -78,7 +77,7 @@ categories:
   System.out.println(people);
   ```
 
-## 3.spring创建对象三种方式
+## Spring创建对象三种方式
 
 - 通过构造方法
 
@@ -103,7 +102,7 @@ categories:
 
 - 通过实例工厂
 
-  ​	1.工厂设计模式:帮助创建类对象,一个工厂可以生产多个对象
+  ​	- 工厂设计模式:帮助创建类对象,一个工厂可以生产多个对象
 
   ```java
   public class PeopleFactory {
@@ -113,7 +112,7 @@ categories:
   }
   ```
 
-  ​	2.在applicationContext.xml配置
+  ​	- 在applicationContext.xml配置
 
   ```xml
   <bean id="factory" class="com.bjsxt.pojo.PeopleFactory"></bean>
@@ -122,7 +121,7 @@ categories:
 
 - 静态工厂
 
-  ​	1.static 方法
+  ​	- static 方法
 
   ```java
   public class PeopleFactory {
@@ -132,13 +131,13 @@ categories:
   }
   ```
 
-  ​	2.在applicationContext.xml配置
+  ​	- 在applicationContext.xml配置
 
   ```xml
   <bean id="peo2" class="com.bjsxt.pojo.PeopleFactory" factory-method="newInstance"></bean>
   ```
 
-## 4.给Bean属性赋值(注入)
+## 给Bean属性赋值(注入)
 
 - 通过构造方法
 
@@ -165,7 +164,7 @@ categories:
   </property>5.DI
   ```
 
-## 5.DI(依赖注入)是什么
+## DI(依赖注入)是什么
 
 ​		当一个类(A)需要依赖另一个类(B)对象时,把B赋值给A的过程
 

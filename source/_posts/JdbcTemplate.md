@@ -1,12 +1,12 @@
 ---
-layout: spring
+layout: Spring
 title: JdbcTemplate
 date: 2020-03-25 09:13:38
 tags: Spring
 categories:
 - Java Frame
 ---
->JdbcTemplate 概述
+## JdbcTemplate 概述
 -  它是 spring 框架中提供的一个对象，是对原始 Jdbc API 对象的简单封装。spring 框架为我们提供了很多
 的操作模板类
     -  操作关系型数据
@@ -19,7 +19,7 @@ categories:
 		
 ---
 
->JdbcTemplate对象的创建
+## JdbcTemplate对象的创建
 
 ```Java
     public JdbcTemplate() {
@@ -71,7 +71,7 @@ public class JdbcTemplateDemo2 {
 }
 ```
 
->在Dao使用JdbcTemplate ==(两种方式)==
+## 在Dao使用JdbcTemplate (两种方式)
 
 -  在 dao 中定义 JdbcTemplate
 -  让 dao 继承 JdbcDaoSupport

@@ -1,13 +1,14 @@
 ---
+layout: gcc
 title: gcc&makefile
 date: 2020-04-09 10:25:58
-tags: linux
+tags: gcc
 categories:
-- gcc
+- linux
 ---
-## gcc 与 makefile
+# gcc 与 makefile
 
-- gcc
+## gcc
 
   - -E  预编译
   - -S  汇编
@@ -21,25 +22,25 @@ categories:
   - -O 优化选项 -O1，-O2，-O3
   - -Wall  显示警告
 
-- makefile
+## makefile
 
   - 显示规则
 
-    - ```makefile
+```makefile
       target：dependency
       	cd
-      ```
+```
 
   - 变量
 
-    - ```makefile
+```makefile
       #定义变量
       OBJ=
       OBJ:=
       OBJ+=
       #引用变量
       $(OBJ)
-      ```
+```
 
   - 通配符
 
@@ -55,7 +56,7 @@ categories:
 
   - 隐示规则：make有智能性，能推断生成出%.o依赖%.c
 
-- 程序发布流程
+## 程序发布流程
 
   - 查看elf文件
     - readelf 命令
@@ -69,18 +70,18 @@ categories:
   - 查看符号表
     - symbol-file ./test.symbol
 
-- 单目录makefile模板
+## 单目录makefile模板
 
 ```makefile
-SRC=$(wildcard *.c) #获取目录所有.c文件
-OBJ=$(patsubst %.c,%.o,$(SRC)) #替换.c为.o
-TARGET= 					#目标
-INCLUDE=					#头文件
-DEFS=						#宏定义
-CFLAGES= -g					#参数
-CC= gcc						#编译器
-LIB_PATH= -L/home/lib/		#第三方库位置
-LIBS= -lpthread				#库名称
+SRC=$(wildcard *.c) 			#获取目录所有.c文件
+OBJ=$(patsubst %.c,%.o,$(SRC)) 	#替换.c为.o
+TARGET= 						#目标
+INCLUDE=						#头文件
+DEFS=							#宏定义
+CFLAGES= -g						#参数
+CC= gcc							#编译器
+LIB_PATH= -L/home/lib/			#第三方库位置
+LIBS= -lpthread					#库名称
 RELEASE= release			
 SYMBOL= symbol
 

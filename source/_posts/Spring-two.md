@@ -1,5 +1,5 @@
 ---
-layout: spring
+layout: Spring
 title: Spring-AOP
 date: 2020-01-11 21:33:25
 tags: Spring
@@ -25,7 +25,7 @@ categories:
 ## Schema-based实现AOP
 
 - 每个通知都需要实现接口或类
-- 配置spring 配置文件时在<aop:config>配置
+- 配置spring 配置文件时在\<aop:config\>配置
 - 实现步骤
   - 新建前置通知类
     - arg0: 切点方法对象Method 对象
@@ -164,13 +164,13 @@ categories:
 
   - <aop: xxxx/> 表示什么通知
 
-  - <aop:after/> 后置通知,是否出现异常都执行
-  - <aop:after-returing/> 后置通知,只有当切点正确执行时执行
-  - <aop:after/> 和<aop:after-returing/> 和<aop:after-throwing/>执行顺序和配置顺序有关
+  - \<aop:after/\> 后置通知,是否出现异常都执行
+  - \<aop:after-returing/\> 后置通知,只有当切点正确执行时执行
+  - \<aop:after/\> 和\<aop:after-returing/\> 和\<aop:after-throwing/\>执行顺序和配置顺序有关
   - execution() 括号不能扩上args
   - 中间使用and 不能使用&& 由spring 把and 解析成&&
   - args(名称) 名称自定义的.顺序和demo1(参数,参数)对应
-  - <aop:before/> arg-names=” 名称” 名称来源于expression=”” 中args(),名称必须一样
+  - \<aop:before/\> arg-names=” 名称” 名称来源于expression=”” 中args(),名称必须一样
   - args() 有几个参数,arg-names 里面必须有几个参数
   - arg-names=”” 里面名称必须和通知方法参数名对应
 

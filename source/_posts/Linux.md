@@ -7,7 +7,7 @@ categories:
 - linux
 ---
 # linux
-- 快捷键
+## 快捷键
   -  Ctrl+d 退出终端
   -  Ctrl+s 暂停 任意键恢复
   -  Ctrl+z 后台运行 fg恢复
@@ -18,7 +18,7 @@ categories:
   -  Shift+PgUp 终端显示向上
   -  Shift+PgDn 终端显示向下
 
-- Shell通配符
+## Shell通配符
   - \* 匹配0或多个字符
   - ? 匹配任意一个字符
   - [list] 匹配list中任意单一字符
@@ -27,7 +27,7 @@ categories:
   - {string1,string2,..} 匹配string1或string2..其一字符串
   - {c1..c2} 匹配c1-c2中全部字符 :{1..10}
  
-- man
+## man
   - 1 一般命令
   - 2 系统调用
   - 3 库函数(c标准函数库)
@@ -37,12 +37,12 @@ categories:
   - 7 杂项
   - 8 系统管理命令和守护进程
   
-- pic char
+## pic char
   - banner  sysvbanner printerbanner
   - toilet
   - figlet
   
-- who
+## who
   - -a 打印能打印
   - -d 打印死掉进程
   - -m 同am i,mom likes
@@ -50,65 +50,65 @@ categories:
   - -u 打印当前登录用户登录信息
   - -r 打印运行等级
   
-- add user
+## add user
   - sudo adduser kanseer 创建kanseer(默认组与用户名相同)
   - su -l kanseer 切换kanseer用户
   - useradd 只创建用户 手动passwd设置密码
 
-- add groups
+## add groups
   - groups kanseer 显示用户:用户组
   
-- add root p
+## add root p
   - sudo usermod -G sudo kanseer
   
-- del user
+## del user
   - sudo deluser kanseer --remove-home
   
-- del group
+## del group
   - groupdel
  
-- ls -l
-![image](https://doc.shiyanlou.com/linux_base/3-9.png)
-![image](https://doc.shiyanlou.com/linux_base/3-10.png)
+## ls -l
+![](/img/linuxbu/linux-1.png)
+![](/img/linuxbu/linux-2.png)
   - -a 显示隐藏文件
   - -d 查看目录
   - -s 显示文件大小
   - -S 按文件大小
   
-- change file author
+## change file author
   - sudo chown user file
   
-- change file p
-  ![image](https://doc.shiyanlou.com/linux_base/3-14.png)
+## change file p
+  ![](/img/linuxbu/linux-3.png)
   - chmod 600 file
   - chmod go+rw file g group o others u user -+权限
   
-- FHS标准
-![image](https://doc.shiyanlou.com/linux_base/4-1.png)
+## FHS标准
+![](/img/linuxbu/linux-4.png)
 
-- 文件四种交互作用形态
-![image](https://doc.shiyanlou.com/document-uid18510labid59timestamp1482919171956.png)
+## 文件四种交互作用形态
+![](/img/linuxbu/linux-5.png)
 
-- mkdir
+## mkdir
   - p 创建多级目录文件
   
-- cp
+## cp
   - cp file dir 复制文件到指定目录
   - -r or -R 复制目录
   
-- rm
+## rm
   - rm file 
   - -f 强制 -r 递归
   
-- mv
+## mv
   - mv source dir 移动文件到指定目录
   - mv old new 重命名文件
   
-- rename 
+## rename 
   - rename 's/\.txt/\.c/' *.txt 批量将后缀为.txt改为.c
   - rename 'y/a-z/A-Z' *.c 批量将文件名和后缀大写
   
-- check file
+## check file
   - cat 正序
   - tac 倒序
   - -b 指定添加行号的方式
@@ -121,9 +121,9 @@ categories:
   - -w : 行号字段占用的位数(默认为 6 位)
   - nl file 添加行号并打印
   
-- more less
+## more less
 
-- head tail
+## head tail
   - -n 1
   - -f 实现不停地读取某个文件的内容并显示
   

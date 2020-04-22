@@ -1,4 +1,5 @@
 ---
+layout: SpringMVC
 title: SpringMVC
 date: 2020-03-27 13:31:49
 tags: SpringMVC
@@ -7,9 +8,9 @@ categories:
 ---
 
 
-## Spring MVC
+# Spring MVC
 
-> 三层架构
+## 三层架构
 >
 > -  我们的开发架构一般都是基于两种形式，一种是 C/S 架构，也就是客户端/服务器，另一种是 B/S 架构，也就 是浏览器服务器。在 JavaEE 开发中，几乎全都是基于 B/S 架构的开发。那么在 B/S 架构中，系统标准的三层架构 包括：表现层、业务层、持久层。三层架构在我们的实际开发中使用的非常多，所以我们课程中的案例也都是基于 三层架构设计的我们的开发架构一般都是基于两种形式，一种是 C/S 架构，也就是客户端/服务器，另一种是 B/S 架构，也就 是浏览器服务器。在 JavaEE 开发中，几乎全都是基于 B/S 架构的开发。那么在 B/S 架构中，系统标准的三层架构 包括：表现层、业务层、持久层。三层架构在我们的实际开发中使用的非常多.
 > - 表现层
@@ -25,7 +26,7 @@ categories:
 
 ---
 
-> MVC模型
+## MVC模型
 >
 > -  MVC 全名是 Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写， 是一种用于设计创建 Web 应用程序表现层的模式。MVC 中每个部分各司其职
 >
@@ -38,7 +39,7 @@ categories:
 
 ---
 
-> SpringMVC
+## SpringMVC
 >
 > -  SpringMVC 是一种基于 Java 的实现 MVC 设计模型的请求驱动类型的轻量级 Web 框架，属于 Spring FrameWork 的后续产品，已经融合在 Spring Web Flow 里面。Spring 框架提供了构建 Web 应用程序的全功 能 MVC 模块。使用 Spring 可插入的 MVC 架构，从而在使用 Spring 进行 WEB 开发时，可以选择使用 Spring 的 Spring MVC 框架或集成其他 MVC 开发框架，如 Struts1(现在一般不用)，Struts2 等。 SpringMVC 已经成为目前最主流的 MVC 框架之一，并且随着 Spring3.0 的发布，全面超越 Struts2，成 为最优秀的 MVC 框架。 它通过一套注解，让一个简单的 Java 类成为处理请求的控制器，而无须实现任何接口。同时它还支持 RESTful 编程风格的请求
 
@@ -46,7 +47,7 @@ categories:
 
 ---
 
-> SpringMVC优势
+## SpringMVC优势
 >
 > -  清晰的角色划分
 >   - 前端控制器（DispatcherServlet）
@@ -70,7 +71,7 @@ categories:
 
 ---
 
-> SpringMVC和Structs2优劣分析
+## SpringMVC和Structs2优劣分析
 >
 > -  共同点
 >   - 它们都是表现层框架，都是基于 MVC 模型编写的
@@ -84,7 +85,7 @@ categories:
 
 ---
 
-> SpringMVC入门
+## SpringMVC入门
 >
 > - web.xml
 
@@ -156,13 +157,13 @@ public class HelloController {
 }
 ```
 
-> SpringMVC请求响应流程
+## SpringMVC请求响应流程
 
 ![](/img/SpringMVC1.png)
 
 ---
 
-> SpringMVC组件
+## SpringMVC组件
 >
 > - DispatcherServlet：前端控制器
 >   - 用户请求到达前端控制器，它就相当于 mvc 模式中的 c，dispatcherServlet 是整个流程控制的中心，由 它调用其它组件处理用户的请求，dispatcherServlet 的存在降低了组件之间的耦合性
@@ -200,7 +201,7 @@ RequestMappingHandlerAdapter(处理适配器)-->
 <!-- End -->
 ```
 
-> 请求参数绑定
+## 请求参数绑定
 >
 > -  绑定机制
 >   - 表单中请求参数都是基于 key=value
@@ -232,7 +233,7 @@ RequestMappingHandlerAdapter(处理适配器)-->
 	</filter-mapping>
 ```
 
-> 自定义类型转换器实现Converter的接口
+## 自定义类型转换器实现Converter的接口
 >
 > -  自定义类型转换器
 
@@ -274,7 +275,7 @@ public class StringToDateConverter implements Converter<String, Date>{
 	<mvc:annotation-driven conversion-service="conversionService"/>
 ```
 
-> 常用注解
+## 常用注解
 >
 > -  RequestParam注解
 >   -  作用：把请求中的指定名称的参数传递给控制器中的形参赋值
