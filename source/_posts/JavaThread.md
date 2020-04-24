@@ -110,9 +110,9 @@ categories:
 - `阻塞` : 在某种特殊情况下，被人为挂起或执行输入输出操作时，让出 CPU 并临时中止自己的执行，进入阻塞状态
 - `死亡 `: 线程完成了它的全部工作或线程被提前强制性地中止或出现异常导致结束
 
-![](img/javathread/1.png)
+![](/img/javathread/1.png)
 
-![](img/javathread/2.png)
+![](/img/javathread/2.png)
 
 ---
 
@@ -122,7 +122,7 @@ categories:
   - 多个线程执行的不确定性引起执行结果的不稳定
   - 多个线程对账本的共享，会造成操作的不完整性，会破坏数据
 
-![](img/javathread/3.png)
+![](/img/javathread/3.png)
 
 - **同步机制**
 
