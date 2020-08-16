@@ -1,0 +1,1541 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Bash, Kanseer">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Bash | Kanseer</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Kanseer</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Kanseer</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Kanseer" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Kanseer" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Bash</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Bash/">
+                                <span class="chip bg-color">Bash</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/linux/" class="post-category">
+                                linux
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-04-15
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="运行Bash脚本"><a href="#运行Bash脚本" class="headerlink" title="运行Bash脚本"></a>运行Bash脚本</h2><pre class=" language-Bash"><code class="language-Bash"># 使用shell来执行
+$ sh hello.sh
+# 使用bash来执行
+$ bash hello.sh
+#使用.来执行
+$ . ./hello.sh
+#使用source来执行
+$ source hello.sh
+#还可以赋予脚本所有者执行权限，允许该用户执行该脚本
+$ chmod u+rx hello.sh
+$  ./hello.sh
+</code></pre>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+echo "The # here does not begin a comment."
+echo 'The # here does not begin a comment.'
+echo The \# here does not begin a comment.
+echo The # 这里开始一个注释
+echo $(( 2#101011 ))     # 数制转换（使用二进制表示），不是一个注释，双括号表示对于数字的处理
+</code></pre>
+<h2 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h2><ul>
+<li>使用分号（;）可以在同一行上写两个或两个以上的命令</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash"> #!/bin/bash
+ echo hello; echo there
+ filename=ttt.sh
+ if [ -e "$filename" ]; then    # 注意: "if"和"then"需要分隔，-e用于判断文件是否存在
+     echo "File $filename exists."; cp $filename $filename.bak
+ else
+     echo "File $filename not found."; touch $filename
+ fi; echo "File test complete."
+</code></pre>
+<ul>
+<li>终止case选项(双分号)</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+varname=b
+
+case "$varname" in
+    [a-z]) echo "abc";;
+    [0-9]) echo "123";;
+esac
+</code></pre>
+<h2 id="点号"><a href="#点号" class="headerlink" title="点号(.)"></a>点号(.)</h2><ul>
+<li>等价于source命令 在当前 bash 环境下读取并执行 FileName.sh 中的命令</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">$ source test.sh
+Hello World
+$ . test.sh
+Hello World
+</code></pre>
+<h2 id="双引号-“"><a href="#双引号-“" class="headerlink" title="双引号(“)"></a>双引号(“)</h2><ul>
+<li>会阻止（解释）STRING中大部分特殊的字符</li>
+</ul>
+<h2 id="单引号-‘"><a href="#单引号-‘" class="headerlink" title="单引号(‘)"></a>单引号(‘)</h2><ul>
+<li>将会阻止STRING中所有特殊字符的解释,这是一种比使用”更强烈的形式</li>
+</ul>
+<h2 id="斜线"><a href="#斜线" class="headerlink" title="斜线(/)"></a>斜线(/)</h2><ul>
+<li>文件名路径分隔符</li>
+</ul>
+<h2 id="反斜线"><a href="#反斜线" class="headerlink" title="反斜线(\)"></a>反斜线(\)</h2><ul>
+<li>转移字符</li>
+</ul>
+<h2 id="反引号"><a href="#反引号" class="headerlink" title="反引号(`)"></a>反引号(`)</h2><ul>
+<li>反引号中的命令会优先执行</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">$ cp `mkdir back` test.sh back
+</code></pre>
+<h2 id="冒号"><a href="#冒号" class="headerlink" title="冒号(:)"></a>冒号(:)</h2><ul>
+<li>等价于”NOP” (no op) 也可以被认为与shell的内建命令true作用相同</li>
+<li>与&gt;重定向操作符结合会清空文件,不存在就创建</li>
+<li>与&gt;&gt;不会对预先存在的目标文件产生影响,不存在就创建</li>
+<li>也可能用来作为注释行</li>
+<li>还用来在 /etc/passwd 和 $PATH 变量中做分隔符</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">$ echo $PATH
+/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
+</code></pre>
+<h2 id="问号"><a href="#问号" class="headerlink" title="问号(?)"></a>问号(?)</h2><ul>
+<li>在一个双括号结构中，? 就是C语言的三元操作符</li>
+</ul>
+<h2 id="美元"><a href="#美元" class="headerlink" title="美元($)"></a>美元($)</h2><ul>
+<li>变量替换</li>
+</ul>
+<h2 id="小括号"><a href="#小括号" class="headerlink" title="小括号(())"></a>小括号(())</h2><ul>
+<li>命令组 在括号中的命令列表，将会作为一个子 shell 来运行</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a=123
+( a=321; )
+
+echo "$a" #a的值为123而不是321，因为括号将判断为局部变量
+</code></pre>
+<ul>
+<li>初始化数组</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+arr=(1 4 5 7 9 21)
+echo ${arr[3]} # get a value of arr
+</code></pre>
+<h2 id="大括号"><a href="#大括号" class="headerlink" title="大括号({})"></a>大括号({})</h2><ul>
+<li>文件名扩展 复制 t.txt 的内容到 t.back 中</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+if [ ! -w 't.txt' ];
+then
+    touch t.txt
+fi
+echo 'test text' >> t.txt
+cp t.{txt,back}
+</code></pre>
+<ul>
+<li>代码块(内部组，这个结构事实上创建了一个匿名函数)然而，与“标准”函数不同的是,在其中声明的变量，对于脚本其他部分的代码来说还是可见的</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a=123
+{ a=321; }
+echo "a = $a" # a=321
+</code></pre>
+<h2 id="中括号"><a href="#中括号" class="headerlink" title="中括号([])"></a>中括号([])</h2><ul>
+<li>条件测试 (双中括号([[ ]])也用作条件测试(判断))</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a=5
+if [ $a -lt 10 ]
+then
+    echo "a: $a"
+else
+    echo 'a>=10'
+fi
+</code></pre>
+<ul>
+<li>数组元素</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+arr=(12 22 32)
+arr[0]=10
+echo ${arr[0]} #10
+</code></pre>
+<h2 id="尖括号-lt-gt"><a href="#尖括号-lt-gt" class="headerlink" title="尖括号(<>)"></a>尖括号(&lt;&gt;)</h2><ul>
+<li>test.sh &gt; filename：重定向test.sh的输出到文件 filename 中。如果 filename 存在的话，那么将会被覆盖</li>
+<li>test.sh &amp;&gt; filename：重定向 test.sh 的 stdout（标准输出）和 stderr（标准错误）到 filename 中</li>
+<li>test.sh &gt;&amp;2：重定向 test.sh 的 stdout 到 stderr 中</li>
+<li>test.sh &gt;&gt; filename：把 test.sh 的输出追加到文件 filename 中。如果filename 不存在的话，将会被创建</li>
+</ul>
+<h2 id="竖线"><a href="#竖线" class="headerlink" title="竖线(|)"></a>竖线(|)</h2><ul>
+<li>管道 分析前边命令的输出，并将输出作为后边命令的输入</li>
+</ul>
+<h2 id="破折号"><a href="#破折号" class="headerlink" title="破折号(-)"></a>破折号(-)</h2><ul>
+<li>选项,前缀</li>
+<li>用于重定向stdio或stdout</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+#下面脚本用于备份最后24小时当前目录下所有修改的文件.
+BACKUPFILE=backup-$(date +%m-%d-%Y)
+# 在备份文件中嵌入时间.
+archive=${1:-$BACKUPFILE}
+#  如果在命令行中没有指定备份文件的文件名,
+#  那么将默认使用"backup-MM-DD-YYYY.tar.gz".
+
+tar cvf - `find . -mtime -1 -type f -print` > $archive.tar
+gzip $archive.tar
+echo "Directory $PWD backed up in archive file \"$archive.tar.gz\"."
+
+exit 0
+</code></pre>
+<h2 id="波浪号"><a href="#波浪号" class="headerlink" title="波浪号(~)"></a>波浪号(~)</h2><ul>
+<li>表示home目录</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>定义变量如: myname=”test”<ul>
+<li>变量名和等号之间不能有空格</li>
+<li>首个字符必须为字母（a-z，A-Z）</li>
+<li>中间不能有空格，可以使用下划线(_)</li>
+<li>不能使用标点符号</li>
+<li>不能使用bash里的关键字</li>
+</ul>
+</li>
+<li>使用变量<ul>
+<li>变量名前加美元符号</li>
+<li>推荐给所有变量加花括号</li>
+<li>已定义的变量可以重新被定义</li>
+</ul>
+</li>
+<li>只读变量<ul>
+<li>使用 readonly 命令可以将变量定义为只读变量</li>
+</ul>
+</li>
+<li>特殊变量<ul>
+<li>局部变量 这种变量只有在代码块或者函数中才可见</li>
+<li>环境变量 这种变量将影响用户接口和 shell 的行为</li>
+</ul>
+</li>
+<li>位置参数<ul>
+<li>从命令行传递到脚本的参数：0，1，2，3… 9之后的位置参数就必须用大括号括起来了，比如，{10}，{11}，11，{12}，0就是脚本文件自身的名字，1 是第一个参数</li>
+<li>$# ： 传递到脚本的参数个数</li>
+<li>$* ： 以一个单字符串显示所有向脚本传递的参数。与位置变量不同,此选项参数可超过 9</li>
+<li>$$ ： 脚本运行的当前进程 ID号</li>
+<li>$! ： 后台运行的最后一个进程的进程 ID号</li>
+<li>$@ ： 与$*相同,但是使用时加引号,并在引号中返回每个参数</li>
+<li>$： 显示shell使用的当前选项,与 set命令功能相同</li>
+<li>$? ： 显示最后命令的退出状态。 0表示没有错误,其他任何值表明有错误</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+# 作为用例, 调用这个脚本至少需要10个参数, 比如:
+# bash test.sh 1 2 3 4 5 6 7 8 9 10
+MINPARAMS=10
+
+echo
+
+echo "The name of this script is \"$0\"."
+
+echo "The name of this script is \"`basename $0`\"."
+
+
+echo
+
+if [ -n "$1" ]              # 测试变量被引用.
+then
+echo "Parameter #1 is $1"  # 需要引用才能够转义"#"
+fi 
+
+if [ -n "$2" ]
+then
+echo "Parameter #2 is $2"
+fi 
+
+if [ -n "${10}" ]  # 大于$9的参数必须用{}括起来.
+then
+echo "Parameter #10 is ${10}"
+fi 
+
+echo "-----------------------------------"
+echo "All the command-line parameters are: "$*""
+
+if [ $# -lt "$MINPARAMS" ]
+then
+ echo
+ echo "This script needs at least $MINPARAMS command-line arguments!"
+fi  
+
+echo
+
+exit 0
+</code></pre>
+<h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><p><img src="/img/bash/bash-1.png" alt=""></p>
+<ul>
+<li>原生bash不支持简单的数学运算，但是可以通过其他命令来实现，例如 bc,awk 和 expr，expr 最常用</li>
+<li>expr 是一款表达式计算工具，使用它能完成表达式的求值操作，使用反引号</li>
+<li>表达式和运算符之间要有空格$a + $b写成$a+$b不行</li>
+<li>条件表达式要放在方括号之间，并且要有空格[ $a == $b ]写成[$a==$b]不行</li>
+<li>乘号（*）前边必须加反斜杠\才能实现乘法运算</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+
+val=`expr $a - $b`
+echo "a - b : $val"
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+
+val=`expr $b / $a`
+echo "b / a : $val"
+
+val=`expr $b % $a`
+echo "b % a : $val"
+
+if [ $a == $b ]
+then
+   echo "a == b"
+fi
+if [ $a != $b ]
+then
+   echo "a != b"
+fi
+</code></pre>
+<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p><img src="/img/bash/bash-2.png" alt=""></p>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a=10
+b=20
+
+if [ $a -eq $b ]
+then
+   echo "$a -eq $b : a == b"
+else
+   echo "$a -eq $b: a != b"
+fi
+</code></pre>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p><img src="/img/bash/bash-3.png" alt=""></p>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+a=10
+b=20
+
+if [[ $a -lt 100 && $b -gt 100 ]]
+then
+   echo "return true"
+else
+   echo "return false"
+fi
+
+if [[ $a -lt 100 || $b -gt 100 ]]
+then
+   echo "return true"
+else
+   echo "return false"
+fi
+</code></pre>
+<h2 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h2><p><img src="/img/bash/bash-4.png" alt=""></p>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+a="abc"
+b="efg"
+
+if [ $a = $b ]
+then
+   echo "$a = $b : a == b"
+else
+   echo "$a = $b: a != b"
+fi
+if [ -n $a ]
+then
+   echo "-n $a : The string length is not 0"
+else
+   echo "-n $a : The string length is  0"
+fi
+if [ $a ]
+then
+   echo "$a : The string is not empty"
+else
+   echo "$a : The string is empty"
+fi
+</code></pre>
+<h2 id="文件测试运算符"><a href="#文件测试运算符" class="headerlink" title="文件测试运算符"></a>文件测试运算符</h2><p><img src="/img/bash/bash-5.png" alt=""></p>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+
+file="/home/shiyanlou/test.sh"
+if [ -r $file ]
+then
+   echo "The file is readable"
+else
+   echo "The file is not readable"
+fi
+if [ -e $file ]
+then
+   echo "File exists"
+else
+   echo "File not exists"
+fi
+</code></pre>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><ul>
+<li>if</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">if condition
+then
+    command1 
+    command2
+    ...
+    commandN 
+fi
+</code></pre>
+<ul>
+<li>if else</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">if condition
+then
+    command1 
+    command2
+    ...
+    commandN
+else
+    command
+fi
+</code></pre>
+<ul>
+<li>if-elif-else</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+</code></pre>
+<ul>
+<li>for</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+
+for loop in 1 2 3 4 5
+do
+    echo "The value is: $loop"
+done
+
+for str in This is a string
+do
+    echo $str
+done
+#This
+#is
+#a
+#string
+</code></pre>
+<ul>
+<li>while</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">while condition
+do
+    command
+done
+
+#!/bin/bash
+int=1
+while(( $int<=5 ))
+do
+    echo $int
+    let "int++"
+done
+
+#输入信息被设置为变量MAN，按结束循环
+echo 'press <CTRL-D> exit'
+echo -n 'Who do you think is the most handsome: '
+while read MAN
+do
+    echo "Yes! $MAN is readlly handsome"
+done
+
+#死循环
+while :
+do
+    command
+done
+
+while true
+do
+    command
+done
+
+for (( ; ; ))
+</code></pre>
+<ul>
+<li>until </li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#直至条件为真时停止
+until condition
+do
+    command
+done
+</code></pre>
+<ul>
+<li>case<ul>
+<li>取值后面必须为单词in，每一模式必须以右括号结束。取值可以为变量或常数。匹配发现取值符合某一模式后，其间所有命令开始执行直至 ;;</li>
+<li>取值将检测匹配的每一个模式。一旦模式匹配，则执行完匹配模式相应命令后不再继续其他模式。如果无一匹配模式，使用星号 * 捕获该值，再执行后面的命令</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">case 值 in
+模式1)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+模式2）
+    command1
+    command2
+    ...
+    commandN
+    ;;
+esac
+
+echo 'Enter a number between 1 and 4:'
+echo 'The number you entered is:'
+read aNum
+case $aNum in
+    1)  echo 'You have chosen 1'
+    ;;
+    2)  echo 'You have chosen 2'
+    ;;
+    3)  echo 'You have chosen 3'
+    ;;
+    4)  echo 'You have chosen 4'
+    ;;
+    *)  echo 'You did not enter a number between 1 and 4'
+    ;;
+esac
+
+#Enter a number between 1 and 4:
+#The number you entered is:
+#3
+#You have chosen 3
+</code></pre>
+<ul>
+<li>break</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+while :
+do
+    echo -n "Enter a number between 1 and 5:"
+    read aNum
+    case $aNum in
+        1|2|3|4|5) echo "The number you entered is $aNum!"
+        ;;
+        *) echo "The number you entered is not between 1 and 5! game over!"
+            break
+        ;;
+    esac
+done
+#Enter a number between 1 and 5:3
+#The number you entered is 3!
+#Enter a number between 1 and 5:7
+#The number you entered is not between 1 and 5! game over!
+</code></pre>
+<ul>
+<li>continue</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+while :
+do
+    echo -n "Enter a number between 1 and 5: "
+    read aNum
+    case $aNum in
+        1|2|3|4|5) echo "The number you entered is $aNum!"
+        ;;
+        *) echo "The number you entered is not between 1 and 5!"
+            continue
+            echo "game over"
+        ;;
+    esac
+done
+</code></pre>
+<h2 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h2><ul>
+<li>可以带function fun() 定义，也可以直接fun() 定义,不带任何参数</li>
+<li>参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255)</li>
+<li>函数返回值在调用该函数后通过 $? 来获得</li>
+<li>所有函数在使用前必须定义</li>
+</ul>
+<pre class=" language-Bash"><code class="language-Bash">[ function ] funname [()]
+
+{
+
+    action;
+
+    [return int;]
+
+}
+
+#!/bin/bash
+funWithReturn(){
+    echo "This function will add the two numbers of the input..."
+    echo "Enter the first number: "
+    read aNum
+    echo "Enter the second number: "
+    read anotherNum
+    echo "The two numbers are $aNum and $anotherNum !"
+    return $(($aNum+$anotherNum))
+}
+funWithReturn
+echo "The sum of the two numbers entered is $? !"
+</code></pre>
+<h2 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h2><pre class=" language-Bash"><code class="language-Bash">#!/bin/bash
+funWithParam(){
+    echo "The first parameter is $1 !"
+    echo "The second parameter is $2 !"
+    echo "The tenth parameter is $10 !"
+    echo "The tenth parameter is ${10} !"
+    echo "The eleventh parameter is ${11} !"
+    echo "The total number of parameters is $# !"
+    echo "Outputs all parameters as a string $* !"
+}
+funWithParam 1 2 3 4 5 6 7 8 9 34 73
+
+#The first parameter is 1 !
+#The second parameter is 2 !
+#The tenth parameter is 10 !
+#The tenth parameter is 34 !
+#The eleventh parameter is 73 !
+#The total number of parameters is 11 !
+#Outputs all parameters as a string 1 2 3 4 5 6 7 8 9 34 73 !
+#$10不能获取第十个参数
+</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Kanseer.github.io" rel="external nofollow noreferrer">Kanseer</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Kanseer.github.io/2020/04/15/Bash/">http://Kanseer.github.io/2020/04/15/Bash/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="http://Kanseer.github.io" target="_blank">Kanseer</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Bash/">
+                                    <span class="chip bg-color">Bash</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/04/23/JavaThread/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaThread">
+                        
+                        <span class="card-title">JavaThread</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java 多线程基本概念
+程序
+是为完成特定任务、用某种语言编写的一组指令的集合。即指一 段静态的代码，静态对象
+
+
+进程
+是程序的一次执行过程，或是正在运行的一个程序。是一个动态的过程：有它自身的产生、存在和消亡的过程.——生命周期
+
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/thread/">
+                        <span class="chip bg-color">thread</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/14/Linux/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="linux base use">
+                        
+                        <span class="card-title">linux base use</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            linux快捷键
+Ctrl+d 退出终端
+Ctrl+s 暂停 任意键恢复
+Ctrl+z 后台运行 fg恢复
+Ctrl+a 光标移至 头
+Ctrl+e 光标移至 尾
+Ctrl+k 删除光标所在到尾
+Alt+Backspace 向前删除一个单词
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/linux/" class="post-category">
+                                    linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="http://Kanseer.github.io" target="_blank">Kanseer</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Kanseer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1318514676@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1318514676" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1318514676" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,1161 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="JavaClass, Kanseer">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JavaClass | Kanseer</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Kanseer</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Kanseer</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Kanseer" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Kanseer" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JavaClass</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Class/">
+                                <span class="chip bg-color">Class</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-04-24
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java常用类"><a href="#Java常用类" class="headerlink" title="Java常用类"></a>Java常用类</h1><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
+<li>String是一个<code>final类</code>，代表不可变的字符序列</li>
+<li>字符串是常量，用双引号引起来表示.它们的值在创建之后不能更改</li>
+<li>String对象的字符内容是存储在一个字符数组<code>value[]</code>中的</li>
+</ul>
+<p><img src="/img/javaclass/1.png" alt=""></p>
+<ul>
+<li>字符串常量存储在 字符串常量池，目的是共享</li>
+<li>字符串非常量对象 存储在堆中</li>
+<li>常量与常量的拼接结果在常量池。且常量池中不会存在相同内容的常量</li>
+<li>只要其中有一个是变量，结果就在堆中</li>
+<li>如果拼接的结果调用<code>intern()方法</code>，返回值就在常量池中</li>
+</ul>
+<p><img src="/img/javaclass/2.png" alt=""></p>
+<h2 id="String常用方法"><a href="#String常用方法" class="headerlink" title="String常用方法"></a>String常用方法</h2><ul>
+<li><code>int length()</code>：返回字符串的长度</li>
+<li><code>char charAt(int index)</code>：返回某索引处的字符</li>
+<li><code>boolean isEmpty()</code>：判断是否是空字符串</li>
+<li><code>String toLowerCase()</code>：使用默认语言环境，将 String 中的所有字符转换为小写</li>
+<li><code>String toUpperCase()</code>：使用默认语言环境，将 String 中的所有字符转换为大写</li>
+<li><code>String trim()</code>：返回字符串的副本，忽略前导空白和尾部空白</li>
+<li><code>boolean equals(Object obj)</code>：比较字符串的内容是否相同</li>
+<li><code>boolean equalsIgnoreCase(String anotherString)</code>：与equals方法类似，忽略大 小写</li>
+<li><code>String concat(String str)</code>：将指定字符串连接到此字符串的结尾。 等价于用“+”</li>
+<li><code>int compareTo(String anotherString)</code>：比较两个字符串的大小</li>
+<li><code>String substring(int beginIndex)</code>：返回一个新的字符串，它是此字符串的从 beginIndex开始截取到最后的一个子字符串</li>
+<li><code>String substring(int beginIndex, int endIndex)</code> ：返回一个新字符串，它是此字 符串从beginIndex开始截取到endIndex(不包含)的一个子字符串</li>
+<li><code>boolean endsWith(String suffix)</code>：测试此字符串是否以指定的后缀结束</li>
+<li><code>boolean startsWith(String prefix)</code>：测试此字符串是否以指定的前缀开始</li>
+<li><code>boolean startsWith(String prefix, int toffset)</code>：测试此字符串从指定索引开始的 子字符串是否以指定前缀开始</li>
+<li><code>boolean contains(CharSequence s)</code>：<code>charSequence是接口</code>，表示char值的一个可读序列</li>
+<li><code>int indexOf(String str)</code>：返回指定子字符串在此字符串中第一次出现处的索引</li>
+<li><code>int indexOf(String str, int fromIndex)</code>：返回指定子字符串在此字符串中第一次出 现处的索引，从指定的索引开始</li>
+<li><code>int lastIndexOf(String str)</code>：返回指定子字符串在此字符串中最右边出现处的索引</li>
+<li><code>int lastIndexOf(String str, int fromIndex)</code>：返回指定子字符串在此字符串中最后 一次出现处的索引，从指定的索引开始反向搜索</li>
+<li><code>String replace(char oldChar, char newChar)</code> : 在字符串中用newChar字符替代oldChar字符，返回一个新的字符串</li>
+<li><code>String replaceAll(String regex,String replacement)</code> : 使用给定的 replacement 字符串替换此字符串匹配给定的正则表达式的每个子字符串</li>
+<li><code>boolean matches(String regex)</code> : 方法用于检测字符串是否匹配给定的正则表达式</li>
+<li><code>String[] split(String regex, int limit)</code> : 根据匹配给定的正则表达式来拆分字符串</li>
+<li><strong>字符串 -&gt; 基本数据类型、包装类</strong><ul>
+<li>Integer包装类的<code>public static int parseInt(String s)</code>：可以将由“数字”字 符组成的字符串转换为整型</li>
+<li>使用java.lang包中的Byte、Short、Long、Float、Double类调相应 的类方法可以将由“数字”字符组成的字符串，转化为相应的基本数据类型</li>
+</ul>
+</li>
+<li><strong>基本数据类型、包装类 -&gt; 字符串</strong><ul>
+<li>调用String类的<code>public String valueOf(int n)</code>可将int型转换为字符串</li>
+<li>相应的<code>valueOf(byte b)、valueOf(long l)、valueOf(float f)、valueOf(double d)、valueOf(boolean b)</code>可由参数的相应类型到字符串的转换</li>
+</ul>
+</li>
+<li><strong>字符数组 -&gt; 字符串</strong><ul>
+<li>String 类的构造器：<code>String(char[])</code> 和 <code>String(char[]，int offset，int length)</code> 分别用字符数组中的全部字符和部分字符创建字符串对象</li>
+</ul>
+</li>
+<li><strong>字符串 -&gt; 字符数组</strong><ul>
+<li><code>public char[] toCharArray()</code>：将字符串中的全部字符存放在一个字符数组 中的方法</li>
+<li><code>public void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)</code>：提供了将指定索引范围内的字符串存放到数组中的方法</li>
+</ul>
+</li>
+<li><strong>字节数组 -&gt; 字符串</strong><ul>
+<li><code>String(byte[])</code>：通过使用平台的默认字符集解码指定的 byte 数组，构 造一个新的 String</li>
+<li><code>String(byte[]，int offset，int length)</code> ：用指定的字节数组的一部分， 即从数组起始位置offset开始取length个字节构造一个字符串对象</li>
+</ul>
+</li>
+<li><strong>字符串 -&gt; 字节数组</strong><ul>
+<li><code>public byte[] getBytes()</code> ：使用平台的默认字符集将此 String 编码为 byte 序列，并将结果存储到一个新的 byte 数组中</li>
+<li><code>public byte[] getBytes(String charsetName)</code> ：使用指定的字符集将 此 String 编码到 byte 序列，并将结果存储到新的 byte 数组</li>
+</ul>
+</li>
+</ul>
+<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><ul>
+<li><code>java.lang.StringBuffer</code>代表可变的字符序列，<code>JDK1.0</code>中声明，可以对字符 串内容进行增删，此时不会产生新的对象</li>
+<li>作为参数传递时，方法内部可以改变值</li>
+</ul>
+<p><img src="/img/javaclass/3.png" alt=""></p>
+<ul>
+<li><code>StringBuffer</code>类不同于String，其对象必须使用构造器生成<ul>
+<li><code>StringBuffer()</code>：初始容量为16的字符串缓冲区</li>
+<li><code>StringBuffer(int size)</code>：构造指定容量的字符串缓冲区</li>
+<li><code>StringBuffer(String str)</code>：将内容初始化为指定字符串内容</li>
+</ul>
+</li>
+<li><code>StringBuffer</code>是线程安全的,所有方法都有<code>synchronized</code></li>
+</ul>
+<h2 id="StringBuffer常用方法"><a href="#StringBuffer常用方法" class="headerlink" title="StringBuffer常用方法"></a>StringBuffer常用方法</h2><ul>
+<li><code>StringBuffer append(xxx)</code>：提供了很多的append()方法，用于进行字符串拼接</li>
+<li><code>StringBuffer delete(int start,int end)</code>：删除指定位置的内容</li>
+<li><code>StringBuffer replace(int start, int end, String str)</code>：把[start,end)位置替换为str</li>
+<li><code>StringBuffer insert(int offset, xxx)</code>：在指定位置插入xxx , 长度不够,可扩容</li>
+</ul>
+<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><ul>
+<li><code>StringBuilder</code> 和 <code>StringBuffer</code> 非常类似，均代表可变的字符序列，而且 提供相关功能的方法也一样</li>
+<li><code>StringBuilder(JDK 5.0)</code>：可变字符序列、<code>效率高、线程不安全</code></li>
+<li><code>StringBuffer(JDK1.0)</code>：可变字符序列、<code>效率低、线程安全</code></li>
+<li><code>String(JDK1.0)</code>：不可变字符序列</li>
+</ul>
+<h2 id="java-lang-System"><a href="#java-lang-System" class="headerlink" title="java.lang.System"></a>java.lang.System</h2><ul>
+<li>系统的很多属性和控制方法都放置在该类的内部</li>
+<li>System类内部包含<code>in</code>、<code>out</code>和<code>err</code>三个成员变量，分别代表标准输入流 (键盘输入)，标准输出流(显示器)和标准错误输出流(显示器)</li>
+<li><code>public static long currentTimeMillis()</code> :  用来返回当前时 间与1970年1月1日0时0分0秒之间以毫秒为单位的时间差</li>
+<li><code>void exit(int status)</code>：该方法的作用是退出程序。其中status的值为0代表正常退出，非零代表 异常退出</li>
+<li><code>void gc()</code>：该方法的作用是请求系统进行垃圾回收。至于系统是否立刻回收，则 取决于系统中垃圾回收算法的实现以及系统执行时的情况</li>
+<li><code>String getProperty(String key)</code>：该方法的作用是获得系统中属性名为key的属性对应的值。系统中常见 的属性名以及属性的作用如下表所示</li>
+</ul>
+<p><img src="/img/javaclass/4.png" alt=""></p>
+<h2 id="java-util-Date"><a href="#java-util-Date" class="headerlink" title="java.util.Date"></a>java.util.Date</h2><ul>
+<li>表示特定的瞬间，精确到毫秒</li>
+<li><code>Date()</code>：使用无参构造器创建的对象可以获取本地当前时间</li>
+<li><code>Date(long date)</code></li>
+<li><code>getTime(</code>):返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象 表示的毫秒数</li>
+<li><code>toString()</code>:把此 Date 对象转换为以下形式的 String： dow mon dd hh:mm:ss zzz yyyy 其中： dow 是一周中的某一天 (Sun, Mon, Tue, Wed, Thu, Fri, Sat)，zzz是时间标准</li>
+</ul>
+<h2 id="java-text-SimpleDateFormat"><a href="#java-text-SimpleDateFormat" class="headerlink" title="java.text.SimpleDateFormat"></a>java.text.SimpleDateFormat</h2><ul>
+<li><strong>格式化</strong><ul>
+<li><code>SimpleDateFormat()</code> ：默认的模式和语言环境创建对象</li>
+<li><code>public SimpleDateFormat(String pattern)</code>：该构造方法可以用参数pattern 指定的格式创建一个对象，该对象调用：</li>
+<li><code>public String format(Date date)</code>：方法格式化时间对象date</li>
+</ul>
+</li>
+<li><strong>解析</strong><ul>
+<li><code>public Date parse(String source)</code>：从给定字符串的开始解析文本，以生成 一个日期</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/javaclass/5.png" alt=""></p>
+<h2 id="java-util-Calender"><a href="#java-util-Calender" class="headerlink" title="java.util.Calender"></a>java.util.Calender</h2><ul>
+<li><code>Calendar是一个抽象基类</code>，主用用于完成日期字段之间相互操作的功能</li>
+<li>获取Calendar实例的方法<ul>
+<li>使用<code>Calendar.getInstance()</code>方法</li>
+<li>调用它的<code>子类GregorianCalendar</code>的构造器</li>
+</ul>
+</li>
+<li>一个Calendar的实例是系统时间的抽象表示，通过<code>get(int field)</code>方法来取得想 要的时间信息。比如YEAR、MONTH、DAY_OF_WEEK、HOUR_OF_DAY 、 MINUTE、SECOND<ul>
+<li><code>public void set(int field,int value)</code></li>
+<li><code>public void add(int field,int amount)</code></li>
+<li><code>public final Date getTime()</code></li>
+<li><code>public final void setTime(Date date)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="java-time-Java-8"><a href="#java-time-Java-8" class="headerlink" title="java.time(Java 8)"></a>java.time(Java 8)</h2><ul>
+<li>中包含了所有关于本地日期（<code>LocalDate</code>）、本地时间 （<code>LocalTime</code>）、本地日期时间（<code>LocalDateTime</code>）、时区（<code>ZonedDateTime</code>） 和持续时间（<code>Duration</code>）的类</li>
+</ul>
+<p><img src="/img/javaclass/6.png" alt=""></p>
+<ul>
+<li><code>LocalDate</code>、<code>LocalTime</code>、<code>LocalDateTime</code> 类是其中较重要的几个类，它们的实例是<code>不可变的对象</code>，分别表示使用 ISO-8601日历系统的日期、时间、日期和时间<ul>
+<li><code>LocalDate</code>代表IOS格式（yyyy-MM-dd）的日期,可以存储 生日、纪念日等日期</li>
+<li><code>LocalTime</code>表示一个时间，而不是日期</li>
+<li><code>LocalDateTime</code>是用来表示日期和时间的，这是一个最常用的类之一</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/javaclass/7.png" alt=""></p>
+<ul>
+<li><strong>瞬时(Instant)</strong><ul>
+<li><code>Instant</code>：时间线上的一个瞬时点. 这可能被用来记录应用程序中的事件时间戳</li>
+<li><code>java.time</code>包通过值类型Instant提供机器视图，不提供处理人类意义上的时间单位</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/javaclass/8.png" alt=""></p>
+<ul>
+<li><strong>格式化与解析</strong><ul>
+<li><code>java.time.format.DateTimeFormatter 类</code>：该类提供了三种格式化方法</li>
+<li><code>ISO_LOCAL_DATE_TIME</code>;<code>ISO_LOCAL_DATE</code>;<code>ISO_LOCAL_TIME</code></li>
+<li><code>ofLocalizedDateTime(FormatStyle.LONG)</code> : 本地化相关的格式</li>
+<li><code>ofPattern(“yyyy-MM-dd hh:mm:ss”)</code> : 自定义的格式</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/javaclass/9.png" alt=""></p>
+<ul>
+<li><strong>其他API</strong><ul>
+<li><code>ZoneId</code>：该类中包含了所有的时区信息，一个时区的ID，如 Europe/Paris</li>
+<li><code>ZonedDateTime</code>：一个在ISO-8601日历系统时区的日期时间，如 2007-12- 03T10:15:30+01:00 Europe/Paris</li>
+<li><code>Clock</code>：使用时区提供对当前即时、日期和时间的访问的时钟</li>
+<li><code>Duration</code> : 用于计算两个“时间”间隔</li>
+<li><code>Period</code> : 用于计算两个“日期”间隔</li>
+<li><code>TemporalAdjuster</code> : 时间校正器。有时我们可能需要获取例如：将日期调整 到“下一个工作日”等操作</li>
+<li><code>TemporalAdjusters</code> : 该类通过静态方法 <code>(firstDayOfXxx()/lastDayOfXxx()/nextXxx())</code>提供了大量的常用 TemporalAdjuster 的实现</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/javaclass/10.png" alt=""></p>
+<h2 id="java-lang-Comparable"><a href="#java-lang-Comparable" class="headerlink" title="java.lang.Comparable"></a>java.lang.Comparable</h2><ul>
+<li><code>Comparable接口</code>强行对实现它的每个类的对象进行整体排序.这种排序被称 为类的自然排序</li>
+<li>实现 Comparable 的类必须实现 <code>compareTo(Object obj)</code> 方法，两个对象即 通过 compareTo(Object obj) 方法的返回值来比较大小</li>
+<li>实现Comparable接口的对象列表（和数组）可以通过 <code>Collections.sort</code> 或 <code>Arrays.sort</code>进行自动排序.实现此接口的对象可以用作有序映射中的键或有 序集合中的元素，无需指定比较器</li>
+<li>对于类 C 的每一个 e1 和 e2 来说，当且仅当 <code>e1.compareTo(e2) == 0</code> 与 <code>e1.equals(e2)</code> 具有相同的 boolean 值时，类 C 的自然排序才叫做与 equals 一致。建议（虽然不是必需的）最好使自然排序与 equals 一致</li>
+<li><code>Comparable</code> 的典型实现：(默认都是从小到大排列的)<ul>
+<li><code>String</code>：按照字符串中字符的Unicode值进行比较</li>
+<li><code>Character</code>：按照字符的Unicode值来进行比较</li>
+<li>数值类型对应的包装类以及<code>BigInteger</code>、<code>BigDecimal</code>：按照它们对应的数值 大小进行比较</li>
+<li><code>Boolean</code>：true 对应的包装类实例大于 false 对应的包装类实例</li>
+<li><code>Date</code>、<code>Time</code>等：后面的日期时间比前面的日期时间大</li>
+</ul>
+</li>
+</ul>
+<h2 id="java-util-Comparator"><a href="#java-util-Comparator" class="headerlink" title="java.util.Comparator"></a>java.util.Comparator</h2><ul>
+<li>当元素的类型没有实现<code>java.lang.Comparable接口</code>而又不方便修改代码， 或者实现了java.lang.Comparable接口的排序规则不适合当前的操作，那 么可以考虑使用 <code>Comparator 的对象</code>来排序，强行对多个对象进行整体排 序的比较</li>
+<li>重写<code>compare(Object o1,Object o2)方法</code>，比较o1和o2的大小：如果方法返 回正整数，则表示o1大于o2；如果返回0，表示相等；返回负整数，表示 o1小于o2</li>
+<li>可以将 Comparator 传递给 sort 方法（如 <code>Collections.sort</code> 或 <code>Arrays.sort</code>）， 从而允许在排序顺序上实现精确控制</li>
+<li>还可以使用 Comparator 来控制某些数据结构（如有序 set或有序映射）的 顺序，或者为那些没有自然顺序的对象 collection 提供排序</li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><code>java.lang.Math</code>提供了一系列静态方法用于科学计算。其方法的参数和返回 值类型一般为double型</li>
+</ul>
+<p><img src="/img/javaclass/11.png" alt=""></p>
+<h2 id="BigInteger"><a href="#BigInteger" class="headerlink" title="BigInteger"></a>BigInteger</h2><ul>
+<li><code>Integer</code>类作为int的包装类，能存储的最大整型值为<code>2^31 - 1</code>，Long类也是有限的， 最大为<code>2^63 - 1</code></li>
+<li><code>java.math</code>包的<code>BigInteger</code>可以表示不可变的任意精度的整数。BigInteger 提供 所有 Java 的基本整数操作符的对应物，并提供 java.lang.Math 的所有相关方法。 另外，BigInteger 还提供以下运算：模算术、GCD 计算、质数测试、素数生成、 位操作以及一些其他操作</li>
+<li><code>BigInteger(String val)</code>：根据字符串构建BigInteger对象</li>
+</ul>
+<p><img src="/img/javaclass/12.png" alt=""></p>
+<h2 id="BigDecimal"><a href="#BigDecimal" class="headerlink" title="BigDecimal"></a>BigDecimal</h2><ul>
+<li>一般的Float类和Double类可以用来做科学计算或工程计算，但在商业计算中， 要求数字精度比较高，故用到<code>java.math.BigDecimal</code>类</li>
+<li><code>BigDecimal</code>类支持不可变的、任意精度的有符号十进制定点数</li>
+<li>构造器<ul>
+<li><code>public BigDecimal(double val)</code></li>
+<li><code>public BigDecimal(String val)</code></li>
+</ul>
+</li>
+<li>常用方法<ul>
+<li><code>public BigDecimal add(BigDecimal augend)</code></li>
+<li><code>public BigDecimal subtract(BigDecimal subtrahend)</code></li>
+<li><code>public BigDecimal multiply(BigDecimal multiplicand)</code></li>
+<li><code>public BigDecimal divide(BigDecimal divisor, int scale, int roundingMode)</code></li>
+</ul>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Kanseer.github.io" rel="external nofollow noreferrer">Kanseer</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://Kanseer.github.io/2020/04/24/Javaclass/">http://Kanseer.github.io/2020/04/24/Javaclass/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="http://Kanseer.github.io" target="_blank">Kanseer</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Class/">
+                                    <span class="chip bg-color">Class</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/05/06/Mybatis/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Mybatis">
+                        
+                        <span class="card-title">Mybatis</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            pom.xml&lt;dependency&gt;
+   &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+   &lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java-Frame/" class="post-category">
+                                    Java Frame
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Mybatis/">
+                        <span class="chip bg-color">Mybatis</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/23/JavaThread/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaThread">
+                        
+                        <span class="card-title">JavaThread</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java 多线程基本概念
+程序
+是为完成特定任务、用某种语言编写的一组指令的集合。即指一 段静态的代码，静态对象
+
+
+进程
+是程序的一次执行过程，或是正在运行的一个程序。是一个动态的过程：有它自身的产生、存在和消亡的过程.——生命周期
+
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/thread/">
+                        <span class="chip bg-color">thread</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="http://Kanseer.github.io" target="_blank">Kanseer</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Kanseer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1318514676@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1318514676" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1318514676" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
