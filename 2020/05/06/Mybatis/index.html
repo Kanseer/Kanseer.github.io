@@ -571,11 +571,18 @@ log4j.appender.Console.layout.ConversionPattern=%d [%t] %-5p [%c] - %m%n
 <h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><blockquote>
 <p>mybatis 一级缓存</p>
 <ul>
-<li>一级缓存是 SqlSession 级别的缓存，只要 SqlSession 没有 flush 或 close，它就存在。<br>mybatis 二级缓存</li>
-<li>二级缓存是 mapper 映射级别的缓存，多个 SqlSession 去操作同一个 Mapper 映射的 sql 语句，多个<br>SqlSession 可以共用二级缓存，二级缓存是跨 SqlSession 的<br>开启二级缓存</li>
-<li>1.配置mybatis-config.xml</li>
+<li>一级缓存是 SqlSession 级别的缓存，只要 SqlSession 没有 flush 或 close，它就存在。</li>
 </ul>
 </blockquote>
+<blockquote>
+<p>mybatis 二级缓存</p>
+<ul>
+<li>二级缓存是 mapper 映射级别的缓存，多个 SqlSession 去操作同一个 Mapper 映射的 sql 语句，多个<br>SqlSession 可以共用二级缓存，二级缓存是跨 SqlSession 的</li>
+</ul>
+</blockquote>
+<h3 id="开启二级缓存"><a href="#开启二级缓存" class="headerlink" title="开启二级缓存"></a>开启二级缓存</h3><ul>
+<li>1.配置mybatis-config.xml</li>
+</ul>
 <pre><code>&lt;settings&gt;
 &lt;!-- 开启二级缓存的支持 --&gt;
 &lt;setting name="cacheEnabled" value="true"/&gt;
